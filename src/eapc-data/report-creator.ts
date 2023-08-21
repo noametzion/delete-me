@@ -116,42 +116,39 @@ const create_report = (data_logs: data_log[],  data_info: DataInfo) => {
         -0.85
     );
 
-    // TODO: add units for each value'
-    // TODO: math.round
-    
     return ({
         info: data_info,
         thickness: {
-            thickness_at_start,
-            thickness_at_end,
-            thickness_difference,
+            thickness_at_start: thickness_at_start.toFixed(2),
+            thickness_at_end: thickness_at_end.toFixed(2),
+            thickness_difference: thickness_difference.toFixed(2),
         },
         ac_dc: {
-            vac_max,
-            vac_min,
-            vac_avg,
-            vac_time_above_limit,
-            ac_max,
-            ac_min,
-            ac_avg,
-            ac_time_above_limit,
-            dc_max,
-            dc_min,
-            dc_avg,
-            dc_time_above_limit
+            vac_max: vac_max.toFixed(2),
+            vac_min: vac_min.toFixed(2),
+            vac_avg: vac_avg.toFixed(2),
+            vac_time_above_limit: vac_time_above_limit.toFixed(2),
+            ac_max: ac_max.toFixed(2),
+            ac_min: ac_min.toFixed(2),
+            ac_avg: ac_avg.toFixed(2),
+            ac_time_above_limit: ac_time_above_limit.toFixed(2),
+            dc_max: dc_max.toFixed(2),
+            dc_min: dc_min.toFixed(2),
+            dc_avg: dc_avg.toFixed(2),
+            dc_time_above_limit: dc_time_above_limit.toFixed(2)
         },
         eon_eoff: {
-            eon_max,
-            eon_min,
-            eon_avg,
-            eon_time_above_limit,
-            eon_eoff_diff_max,
-            eon_eoff_diff_min,
-            eon_eoff_diff_time_below_limit,
-            eoff_max,
-            eoff_min,
-            eoff_avg,
-            eoff_time_above_limit,
+            eon_max: eon_max.toFixed(2),
+            eon_min: eon_min.toFixed(2),
+            eon_avg: eon_avg.toFixed(2),
+            eon_time_above_limit: eon_time_above_limit.toFixed(2),
+            eon_eoff_diff_max: eon_eoff_diff_max.toFixed(2),
+            eon_eoff_diff_min: eon_eoff_diff_min.toFixed(2),
+            eon_eoff_diff_time_below_limit: eon_eoff_diff_time_below_limit.toFixed(2),
+            eoff_max: eoff_max.toFixed(2),
+            eoff_min: eoff_min.toFixed(2),
+            eoff_avg: eoff_avg.toFixed(2),
+            eoff_time_above_limit: eoff_time_above_limit.toFixed(2),
         }
     });
 }

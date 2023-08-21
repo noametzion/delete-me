@@ -11,12 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tsconfig/node-lts": "^18.12.3",
+    "@types/dateformat": "^5.0.0",
     "@types/node": "^20.4.9",
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
+    "moment": "^2.29.4",
     "xlstream": "^2.5.3",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "xlsx-populate": "^1.21.0"
   }
 }
