@@ -24,8 +24,8 @@ const edit_report = (report, report_file_path) => __awaiter(void 0, void 0, void
         // Edit info
         const from_time = (0, moment_1.default)(report.info.from_time).format("DD/MM/yyyy hh:mm");
         const to_time = (0, moment_1.default)(report.info.to_time).format("DD/MM/yyyy hh:mm");
-        workbook.sheet(report_sheet_name).cell("C10").value(`${from_time} - ${to_time}`);
-        workbook.sheet(report_sheet_name).cell("C14").value(`${report.info.prob_serial_number}`);
+        workbook.sheet(report_sheet_name).cell("D10").value(`${from_time} - ${to_time}`);
+        workbook.sheet(report_sheet_name).cell("D14").value(`${report.info.prob_serial_number}`);
         // Edit thickness
         workbook.sheet(report_sheet_name).cell("C16").value(`${report.thickness.thickness_at_start.toFixed(2)}`);
         workbook.sheet(report_sheet_name).cell("F16").value(`${report.thickness.thickness_at_end.toFixed(2)}`);

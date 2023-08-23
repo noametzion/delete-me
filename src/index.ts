@@ -3,8 +3,8 @@ import { create_report} from "./eapc-data/report-creator";
 import {create_report_file} from "./eapc-data/eapc-report-writer";
 import { create_chart_image } from "./eapc-data/chart-creator";
 
-const file_path = './data/final/Pi20306632-from-2023-07-01-0000-to-2023-07-31-2300 (1).xlsx';
-const report_name = 'red_line_Pi20306632_07_2023.xlsx'
+const file_path = './data/final/Pi20306640-from-2023-06-01-0000-to-2023-06-30-2300.xlsx';
+const report_name = 'red_line_Pi20306640_06_2023.xlsx'
 
 const report_example : EAPCReport = {
     info: {

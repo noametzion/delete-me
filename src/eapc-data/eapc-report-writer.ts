@@ -13,8 +13,8 @@ const edit_report = async (report: EAPCReport, report_file_path: string) => {
         // Edit info
         const from_time = moment(report.info.from_time).format("DD/MM/yyyy hh:mm");
         const to_time = moment(report.info.to_time).format("DD/MM/yyyy hh:mm");
-        workbook.sheet(report_sheet_name).cell("C10").value(`${from_time} - ${to_time}`);
-        workbook.sheet(report_sheet_name).cell("C14").value(`${report.info.prob_serial_number}`);
+        workbook.sheet(report_sheet_name).cell("D10").value(`${from_time} - ${to_time}`);
+        workbook.sheet(report_sheet_name).cell("D14").value(`${report.info.prob_serial_number}`);
 
         // Edit thickness
         workbook.sheet(report_sheet_name).cell("C16").value(`${report.thickness.thickness_at_start.toFixed(2)}`);
