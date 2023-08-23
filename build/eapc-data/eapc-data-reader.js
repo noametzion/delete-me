@@ -29,6 +29,22 @@ const data_column_name_G_IR = "Idc,coupon (mA)";
 const data_column_name_H_dc = "Jdc,coupon (A/m²)";
 const data_column_name_I_eon = "Eon,structure (V)";
 const data_column_name_J_eoff = "Eoff,coupon (V)";
+const EAPC_date_to_date = (eapc_date) => {
+    //"2023-07-01-0000"
+    const year = parseInt(eapc_date.substring(0, 4));
+    console.log(year);
+    const month = parseInt(eapc_date.substring(5, 7));
+    console.log(month);
+    const day = parseInt(eapc_date.substring(8, 10));
+    console.log(day);
+    const hour = parseInt(eapc_date.substring(11, 13));
+    const mimnute = parseInt(eapc_date.substring(13, 15));
+    console.log(hour);
+    console.log(mimnute);
+    const date = new Date(year, month - 1, day, hour, mimnute);
+    console.log(date.toString());
+    return date;
+};
 const read_file_info = (file_path) => {
     var workbook = xlsx_1.default.readFile(file_path);
     var sheet_name_list = workbook.SheetNames;
@@ -36,8 +52,8 @@ const read_file_info = (file_path) => {
     // Get time period for report
     const time_sheet = workbook.Sheets[sheet_name_list[time_sheet_index]];
     // TODO: fix format
-    const from_time = time_sheet.B2.v;
-    const to_time = time_sheet.C2.v;
+    const from_time = EAPC_date_to_date(time_sheet.B2.v);
+    const to_time = EAPC_date_to_date(time_sheet.C2.v);
     // Get probe data
     const probe_sheet = workbook.Sheets[sheet_name_list[probe_sheet_index]];
     const prob_serial_number = probe_sheet.B3.v;

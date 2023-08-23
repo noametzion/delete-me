@@ -25,28 +25,37 @@ const edit_report = async (report: EAPCReport, report_file_path: string) => {
         workbook.sheet(report_sheet_name).cell("C19").value(`${report.eon_eoff.eoff_max.toFixed(2)}`);
         workbook.sheet(report_sheet_name).cell("F19").value(`${report.eon_eoff.eoff_min.toFixed(2)}`);
         workbook.sheet(report_sheet_name).cell("C20").value(`${report.eon_eoff.eoff_avg.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F20").value(`${report.eon_eoff.eoff_time_above_limit.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C22").value(`${report.eon_eoff.eon_max.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F22").value(`${report.eon_eoff.eon_min.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C23").value(`${report.eon_eoff.eon_avg.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F23").value(`${report.eon_eoff.eon_time_above_limit.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C25").value(`${report.eon_eoff.eon_eoff_diff_max.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F25").value(`${report.eon_eoff.eon_eoff_diff_min.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C26").value(`${report.eon_eoff.eon_eoff_diff_time_below_limit.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F20").value(`${report.eon_eoff.eoff_standard_deviation.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C21").value(`${report.eon_eoff.eoff_time_above_limit.toFixed(2)}`);
+        
+        workbook.sheet(report_sheet_name).cell("C23").value(`${report.eon_eoff.eon_max.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F23").value(`${report.eon_eoff.eon_min.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C24").value(`${report.eon_eoff.eon_avg.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F24").value(`${report.eon_eoff.eon_standard_deviation.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C25").value(`${report.eon_eoff.eon_time_above_limit.toFixed(2)}`);
+
+        workbook.sheet(report_sheet_name).cell("C27").value(`${report.eon_eoff.eon_eoff_diff_max.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F27").value(`${report.eon_eoff.eon_eoff_diff_min.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C28").value(`${report.eon_eoff.eon_eoff_diff_time_below_limit.toFixed(2)}`);
         
         // Edit ac dc
-        workbook.sheet(report_sheet_name).cell("C28").value(`${report.ac_dc.dc_max.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F28").value(`${report.ac_dc.dc_min.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C29").value(`${report.ac_dc.dc_avg.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F29").value(`${report.ac_dc.dc_time_above_limit.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C31").value(`${report.ac_dc.vac_max.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F31").value(`${report.ac_dc.vac_min.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C32").value(`${report.ac_dc.vac_avg.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F32").value(`${report.ac_dc.vac_time_above_limit.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C34").value(`${report.ac_dc.ac_max.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F34").value(`${report.ac_dc.ac_min.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("C35").value(`${report.ac_dc.ac_avg.toFixed(2)}`);
-        workbook.sheet(report_sheet_name).cell("F35").value(`${report.ac_dc.ac_time_above_limit.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C30").value(`${report.ac_dc.dc_max.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F30").value(`${report.ac_dc.dc_min.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C31").value(`${report.ac_dc.dc_avg.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F31").value(`${report.ac_dc.dc_standard_deviation.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C32").value(`${report.ac_dc.dc_time_above_limit.toFixed(2)}`);
+
+        workbook.sheet(report_sheet_name).cell("C34").value(`${report.ac_dc.vac_max.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F34").value(`${report.ac_dc.vac_min.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C35").value(`${report.ac_dc.vac_avg.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F35").value(`${report.ac_dc.vac_standard_deviation.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C36").value(`${report.ac_dc.vac_time_above_limit.toFixed(2)}`);
+
+        workbook.sheet(report_sheet_name).cell("C38").value(`${report.ac_dc.ac_max.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F38").value(`${report.ac_dc.ac_min.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C39").value(`${report.ac_dc.ac_avg.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("F39").value(`${report.ac_dc.ac_standard_deviation.toFixed(2)}`);
+        workbook.sheet(report_sheet_name).cell("C40").value(`${report.ac_dc.ac_time_above_limit.toFixed(2)}`);
         
         // Write to file.
         return workbook.toFileAsync(report_file_path);
