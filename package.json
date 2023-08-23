@@ -4,9 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc && node build\\index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node-lts": "^18.12.3",
+    "@types/chart.js": "^2.9.37",
+    "@types/dateformat": "^5.0.0",
+    "@types/dom-to-image": "^2.6.4",
+    "@types/node": "^20.4.9",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.3",
+    "dom-to-image": "^2.6.0",
+    "jsdom": "^22.1.0",
+    "moment": "^2.29.4",
+    "xlstream": "^2.5.3",
+    "xlsx": "^0.18.5",
+    "xlsx-populate": "^1.21.0"
+  }
 }
